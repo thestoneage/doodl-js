@@ -27,13 +27,17 @@
     .description { font-size: 1.2em; margin-bottom: 30px; margin-top: 30px; font-style: italic;}
     .download { float: right; }
 		pre { background: #000; color: #fff; padding: 15px;}
+		canvas { background: #fff;}
     hr { border: 0; width: 80%; border-bottom: 1px solid #aaa}
     .footer { text-align:center; padding-top:30px; font-style: italic; }
 	</style>
-	
+	<script src="lib/graph.js"></script>
+  	<script src="lib/layout.js"></script>
+ 	<script src="lib/renderer.js"></script>
+
 </head>
 
-<body>
+<body onload="draw()">
   <a href="http://github.com/thestoneage/doodl-js"><img style="position: absolute; top: 0; right: 0; border: 0;" src="http://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub" /></a>
 
   <div id="container">
@@ -58,6 +62,8 @@
 <p> (iconofthestoneage@gmail.com)<br/>      </p>
 
 
+    <h2>Example</h2>
+    <canvas id="canvas" width="500" height="500" ></canvas>
     <h2>Download</h2>
     <p>
       You can download this project in either
