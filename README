@@ -1,1 +1,14 @@
 doodl-js is graph drawing with HTML5.
+
+How to run the UnitTests:
+Download JsTestDriver:
+http://js-test-driver.googlecode.com/files/JsTestDriver-1.2.1.jar
+
+Run the server:
+$ java -jar JsTestDriver-1.2.1.jar --port 9876
+
+Connect some browsers:
+http://localhost:9876
+
+Run the tests:
+$ java -jar JsTestDriver-1.2.1.jar --tests all --verbose
