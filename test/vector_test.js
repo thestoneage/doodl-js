@@ -24,10 +24,10 @@ VectorTestCase.prototype.testDiv = function() {
 	assertEquals(new VectorTestCase(2, 4).div(2), new VectorTestCase(1, 2));
 };
 
-VectorTestCase.prototype.testLength = function() {
-	assertEquals(new VectorTestCase(1, 0).length(), 1);
-	assertEquals(new VectorTestCase(0, 1).length(), 1);
-	assertEquals(new VectorTestCase(2, 1).length(), Math.sqrt(5));
+VectorTestCase.prototype.testLen = function() {
+	assertEquals(new VectorTestCase(1, 0).len(), 1);
+	assertEquals(new VectorTestCase(0, 1).len(), 1);
+	assertEquals(new VectorTestCase(2, 1).len(), Math.sqrt(5));
 };
 
 VectorTestCase.prototype.testNormalize = function() {
