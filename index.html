@@ -31,17 +31,25 @@
     hr { border: 0; width: 80%; border-bottom: 1px solid #aaa}
     .footer { text-align:center; padding-top:30px; font-style: italic; }
 	</style>
-	<script src="http://github.com/thestoneage/doodl-js/raw/master/lib/graph.js"></script>
-  	<script src="http://github.com/thestoneage/doodl-js/raw/master/lib/layout.js"></script>
-    <script src="http://github.com/thestoneage/doodl-js/raw/master/lib/frlayout.js"></script>
-    <script src="http://github.com/thestoneage/doodl-js/raw/master/lib/renderer.js"></script>
+	<script src="http://github.com/thestoneage/doodl-js/raw/v2/lib/graph.js"></script>
+	<script src="http://github.com/thestoneage/doodl-js/raw/v2/lib/vector.js"></script>
+  	<script src="http://github.com/thestoneage/doodl-js/raw/v2/lib/layout.js"></script>
+  	<script src="http://github.com/thestoneage/doodl-js/raw/v2/lib/layout.js"></script>
+    <script src="http://github.com/thestoneage/doodl-js/raw/v2/lib/frlayout.js"></script>
+    <script src="http://github.com/thestoneage/doodl-js/raw/v2/lib/renderer.js"></script>
     <script>
-var graph =  new Graph([1, 2, 3, 4, 5], [[1, 2], [2, 3], [3, 1], [1, 3]]);
+var a = 1, b = 2, c = 3, d = 4, e = 5, f = 6, g = 7, h = 8, i = 9;
+var nodes = [a, b, c, d, e, f, g, h, i];
+var edges = [[a, b], [a, c], [a, g], [a, i], [a, h], [b, a], [b, g], [c, a], [c, d], [c, e], [c, i], [c, h], [d, c], [d, e], [e, d], [e, f], [e, i], [f, e], [f, e], [f, e], [f, g], [g, a], [g, b], [g, e], [g, f], [g, i], [h, a], [h, c], [i,a], [i, c], [i, e], [i, g]];
+var graph = new Graph(nodes, edges);
+function drawCanvas () {
+draw('canvas', graph, frLayout);
+}
     </script>
 
 </head>
 
-<body onload="draw('canvas', graph, frLayout)" >
+<body onload="drawCanvas()" >
   <a href="http://github.com/thestoneage/doodl-js"><img style="position: absolute; top: 0; right: 0; border: 0;" src="http://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub" /></a>
 
   <div id="container">
