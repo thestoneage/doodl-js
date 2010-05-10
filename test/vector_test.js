@@ -35,4 +35,8 @@ VectorTestCase.prototype.testNormalize = function() {
 	assertEquals(new Vector(3, 0).normalize(), new Vector(1, 0));
 };
 
+VectorTestCase.prototype.testDist = function() {
+	assertEquals(new Vector(0, 0).dist(new Vector(1, 0)), 1);
+	assertEquals(new Vector(0, 0).dist(new Vector(2, 1)), Math.sqrt(5));
+};
 
