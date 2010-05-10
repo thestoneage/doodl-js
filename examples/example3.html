@@ -1,0 +1,33 @@
+<html>
+ <head>
+   <script src="../lib/graph.js"></script>
+   <script src="../lib/vector.js"></script>
+   <script src="../lib/dfs.js"></script>
+   <script src="../lib/layout.js"></script>
+   <script src="../lib/isomlayout.js"></script>
+   <script src="../lib/renderer.js"></script>
+   <script type="text/javascript">
+	  var a = 1, b = 2, c = 3, d = 4, e = 5, f = 6, g = 7, h = 8, i = 9;
+      var nodes = [a, b, c, d, e, f, g, h, i];
+      var edges = [[a, b], [a, c], [a, g], [a, i], [a, h], [b, a], [b, g], [c, a], [c, d], [c, e], [c, i], [c, h], [d, c], [d, e], [e, d], [e, f], [e, i], [f, e], [f, e], [f, e], [f, g], [g, a], [g, b], [g, e], [g, f], [g, i], [h, a], [h, c], [i,a], [i, c], [i, e], [i, g]];
+      var graph = new Graph(nodes, edges);
+      function drawCanvas () {
+	    	draw('canvas', graph, isomLayout);
+      }
+   </script>
+   <style type="text/css">
+     h1 {font-family:Helvetica, Arial, sans-serif; text-align: center;}
+     h2 {font-family:Helvetica, Arial, sans-serif; text-align: center;}
+     h3 {font-family:Helvetica, Arial, sans-serif; text-align: center;}
+     div.exbox {float: left; margin: 10px;}
+     h2.ex {text-align: center;}
+   </style>
+ </head>
+ <body style="background-color:#F0F0F0;" onload="drawCanvas()">
+   <h1>Graph drawing with doodl-js</h1>
+   <div class="exbox">
+     <h3>FR-Layout</h3>
+     <canvas id="canvas" width="600" height="600"></canvas>
+   </div>
+ </body>
+</html>
