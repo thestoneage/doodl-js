@@ -4,7 +4,7 @@
    <script src="../lib/vector.js"></script>
    <script src="../lib/layout.js"></script>
    <script src="../lib/dijkstra.js"></script>
-   <script src="../lib/isomlayout.js"></script>
+   <script src="../lib/frlayout.js"></script>
    <script src="../lib/animator.js"></script>
    <script type="text/javascript">
 	  var a = 1, b = 2, c = 3, d = 4, e = 5, f = 6, g = 7, h = 8, i = 9;
@@ -12,7 +12,7 @@
       var edges = [[a, b], [a, c], [a, g], [a, i], [a, h], [b, a], [b, g], [c, a], [c, d], [c, e], [c, i], [c, h], [d, c], [d, e], [e, d], [e, f], [e, i], [f, e], [f, e], [f, e], [f, g], [g, a], [g, b], [g, e], [g, f], [g, i], [h, a], [h, c], [i,a], [i, c], [i, e], [i, g]];
       var graph = new Graph(nodes, edges);
       function drawCanvas () {
-	    	draw('canvas', graph, isomLayout);
+	    	draw('canvas', graph, frLayout);
       }
    </script>
    <style type="text/css">
@@ -26,7 +26,7 @@
  <body style="background-color:#F0F0F0;" onload="drawCanvas()">
    <h1>Graph drawing with doodl-js</h1>
    <div class="exbox">
-     <h3>FR-Layout</h3>
+     <h3>FR-Layout Evolving</h3>
      <canvas id="canvas" width="600" height="600"></canvas>
    </div>
  </body>
