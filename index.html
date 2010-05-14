@@ -6,7 +6,7 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 
 	<title>thestoneage/doodl-js @ GitHub</title>
-	
+
 	<style type="text/css">
 		body {
   		margin-top: 1.0em;
@@ -31,13 +31,12 @@
     hr { border: 0; width: 80%; border-bottom: 1px solid #aaa}
     .footer { text-align:center; padding-top:30px; font-style: italic; }
 	</style>
-	<script src="http://github.com/thestoneage/doodl-js/raw/v2/lib/graph.js"></script>
-	<script src="http://github.com/thestoneage/doodl-js/raw/v2/lib/vector.js"></script>
-  	<script src="http://github.com/thestoneage/doodl-js/raw/v2/lib/layout.js"></script>
-  	<script src="http://github.com/thestoneage/doodl-js/raw/v2/lib/layout.js"></script>
-    <script src="http://github.com/thestoneage/doodl-js/raw/v2/lib/frlayout.js"></script>
-    <script src="http://github.com/thestoneage/doodl-js/raw/v2/lib/renderer.js"></script>
-    <script>
+	<script src="http://github.com/thestoneage/doodl-js/raw/v3/lib/graph.js"></script>
+	<script src="http://github.com/thestoneage/doodl-js/raw/v3/lib/vector.js"></script>
+	<script src="http://github.com/thestoneage/doodl-js/raw/v3/lib/layout.js"></script>
+  <script src="http://github.com/thestoneage/doodl-js/raw/v3/lib/frlayout.js"></script>
+  <script src="http://github.com/thestoneage/doodl-js/raw/v3/lib/renderer.js"></script>
+  <script>
 var a = 1, b = 2, c = 3, d = 4, e = 5, f = 6, g = 7, h = 8, i = 9;
 var nodes = [a, b, c, d, e, f, g, h, i];
 var edges = [[a, b], [a, c], [a, g], [a, i], [a, h], [b, a], [b, g], [c, a], [c, d], [c, e], [c, i], [c, h], [d, c], [d, e], [e, d], [e, f], [e, i], [f, e], [f, e], [f, e], [f, g], [g, a], [g, b], [g, e], [g, f], [g, i], [h, a], [h, c], [i,a], [i, c], [i, e], [i, g]];
@@ -45,7 +44,7 @@ var graph = new Graph(nodes, edges);
 function drawCanvas () {
 draw('canvas', graph, frLayout);
 }
-    </script>
+  </script>
 
 </head>
 
@@ -69,16 +68,17 @@ draw('canvas', graph, frLayout);
     </div>
 
     <h2>Authors</h2>
-<p>iconofthestoneage (iconofthestoneage@gmail.com)<br/><br/>      </p>
+<p>Marc thestoneage Rummel<br/><br/>      </p>
 <h2>Contact</h2>
-<p> (iconofthestoneage@gmail.com)<br/>      </p>
+<p> (marc.rummel+github@gmail.com)<br/>      </p>
 
 
-    <h2>Example</h2>
+    <h2>Example using FR-Layout </h2>
     <canvas id="canvas" width="500" height="500" >
       This demo requires a browser with <code>&lt;canvas&gt;</code>
       support.
-    </canvas>
+      </canvas>
+      <p>You can drag the nodes</p>
     <h2>Download</h2>
     <p>
       You can download this project in either
