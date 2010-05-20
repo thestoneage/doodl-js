@@ -1,0 +1,27 @@
+<html>
+ <head>
+   <script src="../lib/graph.js"></script>
+   <script src="../lib/vector.js"></script>
+   <script src="../lib/layout.js"></script>
+   <script src="../lib/dijkstra.js"></script>
+   <script src="../lib/floydwarshall.js"></script>
+   <script src="../lib/kklayout.js"></script>
+   <script src="../lib/frlayout.js"></script>
+   <script src="../lib/generator.js"></script>
+   <script src="../lib/renderer.js"></script>
+   <style type="text/css">
+     h1 {font-family:Helvetica, Arial, sans-serif; text-align: center;}
+     h2 {font-family:Helvetica, Arial, sans-serif; text-align: center;}
+     h3 {font-family:Helvetica, Arial, sans-serif; text-align: center;}
+     div.exbox {float: left; margin: 10px;}
+     h2.ex {text-align: center;}
+   </style>
+ </head>
+ <body style="background-color:#F0F0F0;" onload="draw('canvas', completeBipartite(6), kkLayout)">
+   <h1>Graph drawing with doodl-js</h1>
+   <div class="exbox">
+     <h3>KK-Layout</h3>
+     <canvas id="canvas" width="600" height="600"></canvas>
+   </div>
+ </body>
+</html>
