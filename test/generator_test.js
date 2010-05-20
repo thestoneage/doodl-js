@@ -37,3 +37,45 @@ CB4.prototype.testCompleteBipartite = function () {
     assertEquals(original, completeBipartite(4));
 };
 
+L1 = TestCase("L1");
+
+L1.prototype.testLinear = function () {
+    assertEquals(new Graph([1],[]), linear(1));
+};
+
+L2 = TestCase("L2");
+
+L2.prototype.testLinear = function () {
+    assertEquals(new Graph([1, 2], [[1, 2]]), linear(2));
+};
+
+L3 = TestCase("L3");
+
+L3.prototype.testLinear = function () {
+    assertEquals(new Graph([1, 2, 3],[[1, 2], [2, 3]]), linear(3));
+};
+
+R3 = TestCase("R3");
+
+R3.prototype.testRing = function () {
+    assertEquals(new Graph([1, 2, 3], [[1, 2], [2, 3], [3, 1]]), ring(3));
+};
+
+S4 = TestCase("S4");
+S4.prototype.testStar = function () {
+    assertEquals(new Graph([1, 2, 3, 4],[[1, 2], [1, 3], [1, 4]]), star(4));
+};
+
+W4 = TestCase("W4");
+
+W4.prototype.testWheel = function () {
+    var original = new Graph([1, 2, 3, 4],[[1, 2], [2, 3], [1, 3], [3, 4], [1, 4]]);
+    assertEquals(original, wheel(4));
+};
+
+R10 = TestCase("R10");
+R10.prototype.testRand = function () {
+    graph = random(10, 10);
+    assertEquals(10, graph.nodes.length);
+    assertEquals(10, graph.edges.length);
+};
