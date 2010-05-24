@@ -1,0 +1,23 @@
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+        <script src="http://github.com/DmitryBaranovskiy/raphael/blob/master/raphael-min.js?raw=true" type="text/javascript" charset="utf-8"></script>
+        <script src="../lib/rrenderer.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../lib/graph.js"></script>
+        <script src="../lib/vector.js"></script>
+        <script src="../lib/dijkstra.js"></script>
+        <script src="../lib/floydwarshall.js"></script>
+        <script src="../lib/kklayout.js"></script>
+        <script src="../lib/generator.js"></script>
+        <script src="../lib/layout.js"></script>
+        <script type="text/javascript" language="javascript" charset="utf-8">
+            window.onload = function () {
+                        render(complete(4), kkLayout, "holder", new Vector(400, 400));
+            }
+        </script>
+        <title>Renderer with raphaël</title>
+    </head>
+    <body>
+        <div id="holder"></div>
+    </body>
+</html>
