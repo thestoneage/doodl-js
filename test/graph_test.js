@@ -78,4 +78,34 @@ EmptyGraphTestCase.prototype.testEachNode = function () {
   assertEquals("#each_node iterator", [], a);
 };
 
+UK3 = TestCase("UK3");
 
+UK3.prototype.setUp = function () {
+    this.graph = new UndirectedGraph([1, 2, 3], [[1, 2], [1, 3], [2, 3]]);
+};
+
+UK3.prototype.testInDegree = function () {
+    assertEquals(2, this.graph.in_degree(1));
+    assertEquals(2, this.graph.in_degree(2));
+    assertEquals(2, this.graph.in_degree(3));
+};
+
+UK3.prototype.testOutDegree = function () {
+    assertEquals(2, this.graph.out_degree(1));
+    assertEquals(2, this.graph.out_degree(2));
+    assertEquals(2, this.graph.out_degree(3));
+};
+
+UK3.prototype.testEachAdjacentEdge = function () {
+  that = this;
+ 	function helper (node) {
+    var a = [];
+    that.graph.each_adjacent_edge(node, function(edge) {
+     a.push(edge);
+    });
+    return a
+  }
+  assertEquals("#each_adjacent_edge(1) iterator", [[1, 2], [1, 3]], helper(1));
+  assertEquals("#each_adjacent_edge(2) iterator", [[1, 2], [2, 3]], helper(2));
+  assertEquals("#each_adjacent_edge(3) iterator", [[1, 3], [2, 3]], helper(3));
+};
